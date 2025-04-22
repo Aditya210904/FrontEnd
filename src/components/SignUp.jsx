@@ -30,7 +30,7 @@ const SignUp = () => {
         password: Number(formData.password),
         consumer_number: Number(formData.consumer_number)
       };
-      const response = await axios.post('http://localhost:5000/api/auth/signup', payload);
+      const response = await axios.post('https://backend-tk34.onrender.com/api/auth/signup', payload);
       console.log('Signup response:', response.data);
       alert(response.data.message);
       navigate('/signin');
